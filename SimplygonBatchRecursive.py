@@ -13,7 +13,7 @@ if __name__ == "__main__":
     fbxPaths = glob.glob(inputRootPath + "/**/*.fbx", recursive = True)
     for inputPath in fbxPaths:
 
-        command = pathOfSimplygonBatch + " --Input " + inputPath + " --Output " + outputPath + " --Spl " + rulePath + " --Verbose" + '\"'
+        command = pathOfSimplygonBatch + " --Input " + inputPath + " --Output " + outputPath + " --Spl " + rulePath + " --OutputFileFormat .fbx --Verbose" + '\"'
 
         print(command)
         process = Popen(command, shell = True)
